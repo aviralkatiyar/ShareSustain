@@ -39,16 +39,16 @@ useEffect(()=>{
        <div className='container'>
 
         {
-          foodcat !=[]
+          foodcat
           ?foodcat.map((data)=>{
             return(
 
-              <div className='row mb-3'>
-              <div key={data._id} className='fs-3 m-3'>
+              <div className='row mb-3'key={data._id}>
+              <div  className='fs-3 m-3'>
                 {data.CategoryName}
                 </div>
                 <hr/>
-                {fooditem!=[]?fooditem.filter((item)=>(item.CategoryName===data.CategoryName)&&(item.item_name.toLowerCase().includes(search.toLocaleLowerCase())))
+                {fooditem ?fooditem.filter((item)=>(item.CategoryName===data.CategoryName)&&(item.item_name.toLowerCase().includes(search.toLocaleLowerCase())))
                 .map(filterItems=>{
                   return(
                     <div key={filterItems._id} className='col-12 col-md-6 col-lg-3 m-4'>
@@ -62,11 +62,7 @@ useEffect(()=>{
                            id={
                             filterItems._id
                            }
-                        
-                            
-                       
                        />
-                      
                       </div>
                   )
                 }
@@ -80,7 +76,7 @@ useEffect(()=>{
           })
           :""
         }
-        <Cards/>
+      
       
        
        </div>

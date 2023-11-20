@@ -24,6 +24,7 @@ app.use('/api',require("./routes/CreateUser"));
 app.use('/api',require("./routes/Displaydata"));
 app.use('/api', require("./routes/order_data"));
 app.use('/api',require("./routes/myorderdata"));
+app.use('/api',require("./routes/Post"));
 
 app.listen(port,()=>{
     console.log(`listening at ${port}`);

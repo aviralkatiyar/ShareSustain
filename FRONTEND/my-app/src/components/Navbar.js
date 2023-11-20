@@ -46,7 +46,13 @@ export default function Navbar() {
         :""}
          {(localStorage.getItem("authtoken"))?
         <li className="nav-item">
-        <Link className="nav-link active fs-5" aria-current="page" to="/">My Posts</Link>
+        <Link className="nav-link active fs-5" aria-current="page" to="/MYposts">Share</Link>
+      </li>
+      
+        :""}
+         {(localStorage.getItem("authtoken"))?
+        <li className="nav-item">
+        <Link className="nav-link active fs-5" aria-current="page" to="/">Communities</Link>
       </li>
       
         :""}
